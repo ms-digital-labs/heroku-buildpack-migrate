@@ -1,0 +1,6 @@
+set -e
+MIGRATE_COMMAND=${MIGRATE_COMMAND-"bundle exec rake db:migrate"}
+
+echo "-----> Running: $MIGRATE_COMMAND"
+cd $1
+$MIGRATE_COMMAND
